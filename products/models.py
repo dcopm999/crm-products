@@ -42,7 +42,7 @@ class Product(models.Model):
 class Order(models.Model):
     user = models.ForeignKey(get_user_model(), on_delete=models.CASCADE, verbose_name=_('User'))
     product = models.ForeignKey(Product, on_delete=models.CASCADE, verbose_name=_('Product'))
-    is_delivered = models.BooleanField(verbose_name=_('Delivered'))
+    is_delivered = models.BooleanField(default=False, verbose_name=_('Delivered'))
     created = models.DateTimeField(auto_now_add=True, editable=False)
     edited = models.DateTimeField(auto_now=True, editable=False)
 
