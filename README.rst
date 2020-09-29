@@ -5,8 +5,8 @@ crm-products
 .. image:: https://badge.fury.io/py/crm-products.svg
     :target: https://badge.fury.io/py/crm-products
 
-.. image:: https://travis-ci.org/dcopm999/crm-products.svg?branch=master
-    :target: https://travis-ci.org/dcopm999/crm-products
+.. image:: https://travis-ci.com/dcopm999/crm-products.svg?branch=master
+    :target: https://travis-ci.com/dcopm999/crm-products
 
 .. image:: https://codecov.io/gh/dcopm999/crm-products/branch/master/graph/badge.svg
     :target: https://codecov.io/gh/dcopm999/crm-products
