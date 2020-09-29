@@ -1,6 +1,8 @@
 *.py[cod]
 __pycache__
 *[~#]
+db.sqlite3
+.python-version
 
 # migrations 
 **/migrations/**
@@ -28,7 +30,9 @@ lib64
 pip-log.txt
 
 # Unit test / coverage reports
+*,cover
 .coverage
+coverage.xml
 .tox
 nosetests.xml
 htmlcov
