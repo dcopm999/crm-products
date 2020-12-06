@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 from django.contrib import admin
 
-from mptt.admin import MPTTModelAdmin, DraggableMPTTAdmin
+from mptt.admin import DraggableMPTTAdmin
 from sorl.thumbnail.admin import AdminImageMixin
 
 from products import models
@@ -16,7 +16,8 @@ class CatalogAdmin(DraggableMPTTAdmin):
 
 @admin.register(models.Product)
 class ProductAdmin(AdminImageMixin, admin.ModelAdmin):
-    list_display = ['name', 'category', 'desc', 'image', 'price']
+    list_display = ['name', 'category', 'desc', 'image', 'price', 'is_active']
+    list_filter = ['is_active']
 
 
 @admin.register(models.Order)

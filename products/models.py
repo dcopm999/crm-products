@@ -23,7 +23,8 @@ class Product(models.Model):
     image = ImageField(upload_to='product', verbose_name=_('Image'))
     name = models.CharField(max_length=250, verbose_name=_('Product name'))
     desc = models.TextField(verbose_name=_('Description'))
-    price = models.DecimalField(max_digits=6, decimal_places=0, default=0, verbose_name=_('Price'))
+    price = models.DecimalField(max_digits=6, decimal_places=0, default=0.01, verbose_name=_('Price'))
+    is_active = models.BooleanField(default=False, verbose_name=('Active'))
 
     def __str__(self):
         return self.name
