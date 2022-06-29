@@ -1,17 +1,14 @@
 from django.contrib import admin
 from mptt.admin import DraggableMPTTAdmin
 from sorl.thumbnail.admin import AdminImageMixin
-from suit.admin import SortableModelAdmin
 
 from products import models
 
 
 @admin.register(models.Catalog)
-class CatalogAdmin(DraggableMPTTAdmin, SortableModelAdmin):
+class CatalogAdmin(DraggableMPTTAdmin):
     list_display = ["indented_title"]
-    list_display_links = ["indented_title"]
     mptt_level_indent = 20
-    sortable = "order"
 
 
 @admin.register(models.Product)

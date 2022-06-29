@@ -11,7 +11,6 @@ class Catalog(MPTTModel):
     parent = TreeForeignKey(
         "self", on_delete=models.CASCADE, null=True, blank=True, related_name="children"
     )
-    order = models.PositiveIntegerField(verbose_name=_("Order"))
     slug = models.SlugField(editable=False, verbose_name=_("Slug"))
 
     def __str__(self):
@@ -24,7 +23,7 @@ class Catalog(MPTTModel):
         Catalog.objects.rebuild()
 
     class MPTTMeta:
-        order_insertion_by = ["order"]
+        order_insertion_by = ["id"]
 
 
 class Product(models.Model):
